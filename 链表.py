@@ -159,6 +159,9 @@ class CircularQueue:
         self.__tail = newest  # 将尾节点设置为新节点
         self.__size += 1
 
+    def rotate(self):
+        if self.__size > 0:
+            self.__tail = self.__tail._next
 
 linkedqueue = LinkedQueue()
 for i in range(5):
